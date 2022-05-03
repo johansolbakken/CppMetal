@@ -8,6 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		8D31F50C28213BE000488FC4 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D31F50B28213BE000488FC4 /* main.cpp */; };
+		8D31F51428213BF000488FC4 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D31F51328213BF000488FC4 /* QuartzCore.framework */; };
+		8D31F51628213BFF00488FC4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D31F51528213BFF00488FC4 /* Foundation.framework */; };
+		8D31F51828213C0400488FC4 /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D31F51728213C0400488FC4 /* Metal.framework */; };
+		8D31F51A28213C7300488FC4 /* metal_impl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D31F51928213C7300488FC4 /* metal_impl.cpp */; };
+		8D31F5252821608100488FC4 /* Renderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D31F5232821608100488FC4 /* Renderer.cpp */; };
+		8D31F5282821620600488FC4 /* Application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D31F5262821620600488FC4 /* Application.cpp */; };
+		8D31F52C282162BD00488FC4 /* Delegates.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D31F52A282162BD00488FC4 /* Delegates.cpp */; };
+		8D31F52E282170BD00488FC4 /* primitive.metal in Sources */ = {isa = PBXBuildFile; fileRef = 8D31F52D282170BD00488FC4 /* primitive.metal */; };
+		8D31F5322821A51900488FC4 /* Math.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D31F5302821A51900488FC4 /* Math.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +34,19 @@
 /* Begin PBXFileReference section */
 		8D31F50828213BE000488FC4 /* CppMetalTesting */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = CppMetalTesting; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D31F50B28213BE000488FC4 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		8D31F51328213BF000488FC4 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		8D31F51528213BFF00488FC4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		8D31F51728213C0400488FC4 /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
+		8D31F51928213C7300488FC4 /* metal_impl.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = metal_impl.cpp; sourceTree = "<group>"; };
+		8D31F5232821608100488FC4 /* Renderer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Renderer.cpp; sourceTree = "<group>"; };
+		8D31F5242821608100488FC4 /* Renderer.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Renderer.hpp; sourceTree = "<group>"; };
+		8D31F5262821620600488FC4 /* Application.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Application.cpp; sourceTree = "<group>"; };
+		8D31F5272821620600488FC4 /* Application.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Application.hpp; sourceTree = "<group>"; };
+		8D31F52A282162BD00488FC4 /* Delegates.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Delegates.cpp; sourceTree = "<group>"; };
+		8D31F52B282162BD00488FC4 /* Delegates.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Delegates.hpp; sourceTree = "<group>"; };
+		8D31F52D282170BD00488FC4 /* primitive.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = primitive.metal; sourceTree = "<group>"; };
+		8D31F5302821A51900488FC4 /* Math.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Math.cpp; sourceTree = "<group>"; };
+		8D31F5312821A51900488FC4 /* Math.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Math.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +54,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D31F51428213BF000488FC4 /* QuartzCore.framework in Frameworks */,
+				8D31F51828213C0400488FC4 /* Metal.framework in Frameworks */,
+				8D31F51628213BFF00488FC4 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,6 +68,7 @@
 			children = (
 				8D31F50A28213BE000488FC4 /* CppMetalTesting */,
 				8D31F50928213BE000488FC4 /* Products */,
+				8D31F51228213BF000488FC4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,9 +83,53 @@
 		8D31F50A28213BE000488FC4 /* CppMetalTesting */ = {
 			isa = PBXGroup;
 			children = (
+				8D31F52F2821A50100488FC4 /* math */,
+				8D31F5292821628C00488FC4 /* app */,
+				8D31F5222821607200488FC4 /* renderer */,
 				8D31F50B28213BE000488FC4 /* main.cpp */,
+				8D31F51928213C7300488FC4 /* metal_impl.cpp */,
 			);
 			path = CppMetalTesting;
+			sourceTree = "<group>";
+		};
+		8D31F51228213BF000488FC4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8D31F51728213C0400488FC4 /* Metal.framework */,
+				8D31F51528213BFF00488FC4 /* Foundation.framework */,
+				8D31F51328213BF000488FC4 /* QuartzCore.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8D31F5222821607200488FC4 /* renderer */ = {
+			isa = PBXGroup;
+			children = (
+				8D31F5232821608100488FC4 /* Renderer.cpp */,
+				8D31F5242821608100488FC4 /* Renderer.hpp */,
+			);
+			path = renderer;
+			sourceTree = "<group>";
+		};
+		8D31F5292821628C00488FC4 /* app */ = {
+			isa = PBXGroup;
+			children = (
+				8D31F5262821620600488FC4 /* Application.cpp */,
+				8D31F5272821620600488FC4 /* Application.hpp */,
+				8D31F52A282162BD00488FC4 /* Delegates.cpp */,
+				8D31F52B282162BD00488FC4 /* Delegates.hpp */,
+				8D31F52D282170BD00488FC4 /* primitive.metal */,
+			);
+			path = app;
+			sourceTree = "<group>";
+		};
+		8D31F52F2821A50100488FC4 /* math */ = {
+			isa = PBXGroup;
+			children = (
+				8D31F5302821A51900488FC4 /* Math.cpp */,
+				8D31F5312821A51900488FC4 /* Math.hpp */,
+			);
+			path = math;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -119,7 +189,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D31F5322821A51900488FC4 /* Math.cpp in Sources */,
 				8D31F50C28213BE000488FC4 /* main.cpp in Sources */,
+				8D31F52E282170BD00488FC4 /* primitive.metal in Sources */,
+				8D31F5252821608100488FC4 /* Renderer.cpp in Sources */,
+				8D31F5282821620600488FC4 /* Application.cpp in Sources */,
+				8D31F52C282162BD00488FC4 /* Delegates.cpp in Sources */,
+				8D31F51A28213C7300488FC4 /* metal_impl.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -241,6 +317,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = W9H4HM3497;
 				ENABLE_HARDENED_RUNTIME = YES;
+				HEADER_SEARCH_PATHS = (
+					"\"$(SRCROOT)/vendor/metal-cpp\"",
+					"\"$(SRCROOT)/vendor/metal-cpp-extensions\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -251,6 +331,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = W9H4HM3497;
 				ENABLE_HARDENED_RUNTIME = YES;
+				HEADER_SEARCH_PATHS = (
+					"\"$(SRCROOT)/vendor/metal-cpp\"",
+					"\"$(SRCROOT)/vendor/metal-cpp-extensions\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
